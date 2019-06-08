@@ -6,7 +6,7 @@ export default class Movie extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      movie: ""
+      movie: null
     };
   }
 
@@ -46,7 +46,10 @@ export default class Movie extends Component {
     return (
       <div className="save-wrapper">
         <MovieCard movie={this.state.movie} />
-        <div onClick={this.props.addToSavedList} className="save-button">
+        <div
+          onClick={() => this.props.addToSavedList(this.state.movie)}
+          className="save-button"
+        >
           Save
         </div>
       </div>

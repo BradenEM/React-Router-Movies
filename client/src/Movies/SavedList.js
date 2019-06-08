@@ -7,7 +7,7 @@ export default class SavedList extends Component {
   }
 
   render() {
-    console.log(this.props.list);
+    console.log(this.props);
     return (
       <div className="saved-list">
         <h3>Saved Movies:</h3>
